@@ -1,6 +1,7 @@
 {
   "name": "stackblitz-codeflow-prisma",
   "dependencies": {
+    "@prisma/client": "^4.10.1",
     "prisma": "^4.10.1"
   }
 }
