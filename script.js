@@ -4,8 +4,15 @@ const prisma = new PrismaClient()
 
 async function main() {
 
-  const all = await prisma.user.findMany()
-  console.log(`all: `, all)
+  let created = await prisma.user.create({
+    data: {
+      email: "foo@example.org"
+    }
+  })
+  console.log({ created })
+
+  const findMany = await prisma.user.findMany()
+  console.log({ findMany })
 
 }
 
